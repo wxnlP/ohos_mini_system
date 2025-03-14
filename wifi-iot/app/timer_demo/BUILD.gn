@@ -1,0 +1,10 @@
+static_library("timer_demo") {
+    sources = [
+        "timer_basic.c",
+    ]
+
+    include_dirs = [
+        "//utils/native/lite/include",
+        "//kernel/liteos_m/kal/cmsis",
+    ]
+}
