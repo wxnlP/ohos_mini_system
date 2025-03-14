@@ -4,3 +4,7 @@ wifi-iot/bundle.json
 wifi-iot/README_zh.md
 wifi-iot/README.md
 wifi-iot/LICENSE
+wifi-iot/app/demolink
+wifi-iot/app/iothardware
+wifi-iot/app/samgr
+wifi-iot/app/startup
