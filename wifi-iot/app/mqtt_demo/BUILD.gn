@@ -1,0 +1,39 @@
+static_library("mqtt_demo") {
+    cflags = [
+        "-Wno-sign-compare",                      # 有符号数和无符号数对比
+        "-Wno-unused-parameter",                  # 未使用的参数
+    ]
+
+    # Paho-MQTT相关宏定义
+    defines = [
+        "MQTT_TASK",                              # 使用线程方式
+        "MQTTCLIENT_PLATFORM_HEADER=mqtt_ohos.h", # 指定OHOS(LiteOS)适配接口文件
+        "CMSIS",                                  # 使用CMSIS库
+    ]
+    
+    sources = [
+        "mqtt_task.c",
+        "mqtt_demo.c",
+    ]
+
+    include_dirs = [
+        # include "ohos_init.h"
+        "//utils/native/lite/include",
+        # include CMSIS-RTOS API V2 for OpenHarmony1.0+
+        "//kernel/liteos_m/kal/cmsis",
+        # include IoT硬件设备操作接口 for OpenHarmony1.0+：
+        "//base/iot_hardware/peripheral/interfaces/kits",
+        # include HAL接口中的WIFI接口
+        "//foundation/communication/wifi_lite/interfaces/wifiservice",
+        # MQTTClient-C模块接口
+        "//applications/sample/wifi-iot/app/paho_mqtt/MQTTClient-C/src",        
+        # MQTTClient-C模块接口
+        "//applications/sample/wifi-iot/app/paho_mqtt/MQTTClient-C/src/ohos",   
+        # MQTTPacket模块接口
+        "//applications/sample/wifi-iot/app/paho_mqtt/MQTTPacket/src",     
+        # EasyWiFi模块接口
+        "//applications/sample/wifi-iot/app/easy_wifi/src",     
+        # cJSON模块
+        "//third_party/cJSON",
+    ]
+}
