@@ -1,0 +1,14 @@
+static_library ("oled_demo") {
+    sources = [
+        "oled.c",
+        "oled_demo.c",
+    ]
+    include_dirs = [
+        # include "ohos_init.h"
+        "//utils/native/lite/include",
+        # include CMSIS-RTOS API V2 for OpenHarmony1.0+
+        "//kernel/liteos_m/kal/cmsis",
+        # include IoT硬件设备操作接口 for OpenHarmony1.0+：
+        "//base/iot_hardware/peripheral/interfaces/kits",
+    ]
+}
