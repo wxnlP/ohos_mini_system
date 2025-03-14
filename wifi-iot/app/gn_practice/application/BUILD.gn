@@ -1,0 +1,16 @@
+static_library("gn_app") {
+    sources = [
+        "app_main.c",
+        "component_1.c",
+        "component_2.c",
+    ]
+    include_dirs = [
+        "../driver",
+        "../library",
+        "//utils/native/lite/include",
+    ]
+    cflags = [ "-Wno-unused-variable" ]
+    cflags += [ "-Wno-unused-but-set-variable" ]
+    cflags += [ "-Wno-unused-parameter" ]
+}
+

@@ -1,0 +1,8 @@
+static_library("gn_driver") {
+    sources = [
+        "drv_1.c",
+    ]
+    include_dirs = [
+        "//utils/native/lite/include",
+    ]
+}

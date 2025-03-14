@@ -1,0 +1,9 @@
+static_library("gn_library") {
+    sources = [
+        "lib_1.c",
+        "lib_2.c"
+    ]
+    include_dirs = [
+        "//utils/native/lite/include",
+    ]
+}
