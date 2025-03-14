@@ -1,0 +1,2 @@
+# ohos_mini_system
+Openharmony轻量系统开发源码
