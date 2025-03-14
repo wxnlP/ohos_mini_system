@@ -1,0 +1,17 @@
+static_library("wifi_demo") {
+    sources = [
+        "wifi_scan_demo.c",
+        "wifi_connect_demo.c",
+        "wifi_hotspot_demo.c",
+    ]
+    include_dirs = [
+        # include "ohos_init.h"
+        "//utils/native/lite/include",
+        # include CMSIS-RTOS API V2 for OpenHarmony1.0+
+        "//kernel/liteos_m/kal/cmsis",
+        # include IoT硬件设备操作接口 for OpenHarmony1.0+：
+        "//base/iot_hardware/peripheral/interfaces/kits",
+        # include HAL接口中的WIFI接口
+        "//foundation\communication\wifi_lite\interfaces\wifiservice"
+    ]
+}
