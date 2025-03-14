@@ -1,0 +1,9 @@
+static_library("TestComponent") {
+    sources = [
+        "demo.c"
+    ]
+    include_dirs = [
+        # 保护 "ohos_init.h" 等头文件
+        "//utils/native/lite/include",
+    ]
+}   
