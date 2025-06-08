@@ -38,6 +38,10 @@ lite_component("app") {
         # EasyWiFi模块
         "easy_wifi/src:easy_wifi",
         # UART模块
-        "uart_demo:uart_demo"
+        "uart_demo:uart_demo",
+        # "tcp_client",
+	# "tcp_server",
+    	# "udp_client",
+    	# "udp_server",
     ]
 }
