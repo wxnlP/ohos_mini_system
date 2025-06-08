@@ -1,0 +1,18 @@
+static_library("udp_client") {
+    sources = [
+        "demo.c",
+        "udp_client.c"
+    ]
+    include_dirs = [
+        # include "ohos_init.h"
+        "//commonlibrary/utils_lite/include",
+        # include CMSIS-RTOS API V2 for OpenHarmony5.0+
+        "//kernel/liteos_m/kal/cmsis",
+        # include IoT硬件设备操作接口 for OpenHarmony5.0+：
+        "//base/iothardware/peripheral/interfaces/inner_api",
+        # include HAL接口中的WIFI接口
+        "//foundation/communication/wifi_lite/interfaces/wifiservice",
+        # include EasyWiFi模块接口
+        "//applications/sample/wifi-iot/3861/shared_drivers/easy_wifi/src",
+    ]
+}
